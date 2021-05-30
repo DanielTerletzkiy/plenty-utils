@@ -1,5 +1,6 @@
 <template>
-  <v-container style="max-width: 800px">
+<div :style="{display: isPhone?'block':'flex'}">
+  <v-container :style="{marginLeft: '0px',marginRight: '0px', maxWidth: isPhone?'100%':'300px'}">
     <v-card flat>
       <v-card-title
         class="text-h4 font-weight-bold"
@@ -25,6 +26,7 @@
               background: util.gradient,
               '-webkit-background-clip': 'text',
               '-webkit-text-fill-color': 'transparent',
+              '-webkit-box-decoration-break': 'clone',
             }"
           >
             {{ category }}
@@ -37,8 +39,9 @@
                 border-radius: 3px;
               "
             ></v-divider>
-            <div class="ml-1">
+            <div class="ml-1" style="width: 100%">
               <v-list-item
+                active-class="primary--text text--accent-1"
                 class="mb-0"
                 v-for="item in util.categories[category]"
                 :key="item.name"
@@ -61,12 +64,32 @@
         </v-list>
       </v-card-text>
     </v-card>
-    <router-view></router-view>
   </v-container>
+  <v-container>
+      <v-card flat>
+
+        <v-card-title
+          class="text-h4 font-weight-bold"
+          v-bind:style="{
+            'white-space': 'inherit !important',
+            'text-transform': 'uppercase',
+            background: util.gradient,
+          }"
+        >
+          <v-icon x-large>{{category.icon}}</v-icon>{{category.name}}
+        </v-card-title>
+
+        <v-card-text> 
+    <router-view></router-view>
+
+        </v-card-text>
+      </v-card>
+    </v-container>
+
+  </div>
 </template>
 
 <script>
-/* eslint-disable prettier/prettier */
 
 export default {
   computed: {
@@ -74,6 +97,18 @@ export default {
       console.log(this.$route);
       return this.utilities[this.$route.params.id];
     },
+    category() {
+      try {
+        var category = Object.keys(this.util.categories).find(e=>this.util.categories[e].find(x=>x.name == this.$route.path.split('/')[3]));
+      var item = this.util.categories[category].find(x=>x.name == this.$route.path.split('/')[3])
+      item.parent=category;
+      console.log(item);
+      return item
+      } catch (error) {
+        return {}
+      }
+      
+    }
   },
 };
 </script>
