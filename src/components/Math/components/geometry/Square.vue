@@ -167,7 +167,7 @@
                   :key="example.description"
                 >
                   <div style="display: flex; align-items: center">
-                    <span class="text-h5 font-weight-bold" style="min-width: 40px; text-align: right">
+                    <span class="text-h5 font-weight-bold" style="min-width: 18px; text-align: right">
                       {{ example.description }}
                     </span>
                     <v-divider vertical class="mx-2" />
