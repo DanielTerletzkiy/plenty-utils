@@ -41,7 +41,7 @@
             ></v-divider>
             <div class="ml-1" style="width: 100%">
               <v-list-item
-                active-class="primary--text text--accent-1"
+                active-class="primary--text text--lighten-3"
                 class="mb-0"
                 v-for="item in util.categories[category]"
                 :key="item.name"
@@ -100,10 +100,10 @@ export default {
     category() {
       try {
         var category = Object.keys(this.util.categories).find(e=>this.util.categories[e].find(x=>x.name == this.$route.path.split('/')[3]));
-      var item = this.util.categories[category].find(x=>x.name == this.$route.path.split('/')[3])
-      item.parent=category;
-      console.log(item);
-      return item
+        var item = this.util.categories[category].find(x=>x.name == this.$route.path.split('/')[3])
+        item.parent=category;
+        console.log(item);
+        return item
       } catch (error) {
         return {}
       }

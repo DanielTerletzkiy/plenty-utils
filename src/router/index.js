@@ -1,12 +1,14 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import UtilitiesList from "../components/UtilitiesList.vue";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import UtilitiesList from '../components/UtilitiesList.vue';
 
 //Utils
-import Categories from "../components/Categories.vue";
+import Categories from '../components/Categories.vue';
 
 //Categories
-import Rectangle from "../components/Math/components/geometry/Rectangle.vue";
+import Square from '../components/Math/components/geometry/Square.vue';
+import Rectangle from '../components/Math/components/geometry/Rectangle.vue';
+import Circle from '../components/Math/components/geometry/Circle.vue';
 
 Vue.use(VueRouter);
 
@@ -27,11 +29,11 @@ const routes = [
       },
       {
         path: 'Square',
-        component: Rectangle,
+        component: Square,
       },
       {
         path: 'Circle',
-        component: Rectangle,
+        component: Circle,
       },
     ],
   },
@@ -47,7 +49,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
 });
