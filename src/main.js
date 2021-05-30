@@ -32,14 +32,14 @@ Vue.mixin({
         gradient: 'linear-gradient(to right, #8e2de2, #4a00e0)',
         categories: {
           geometry: [
-            { name: 'Square', icon: 'mdi-' },
-            { name: 'Rectangle', icon: 'mdi-' },
-            { name: 'Circle', icon: 'mdi-' },
+            { name: 'Square', icon: 'mdi-crop-square' },
+            { name: 'Rectangle', icon: 'mdi-rectangle-outline' },
+            { name: 'Circle', icon: 'mdi-circle-outline' },
           ],
           algebra: [
-            { name: 'Calculator', icon: 'mdi-' },
-            { name: 'Unit Converter', icon: 'mdi-' },
-            { name: 'Functions', icon: 'mdi-' },
+            { name: 'Calculator', icon: 'mdi-calculator' },
+            { name: 'Unit Converter', icon: 'mdi-tape-measure' },
+            { name: 'Functions', icon: 'mdi-function-variant' },
           ],
         },
       },

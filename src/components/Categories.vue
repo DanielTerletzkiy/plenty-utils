@@ -13,6 +13,7 @@
       </v-card-title>
       <v-card-text>
         <v-list
+          rounded
           v-for="category in Object.keys(util.categories)"
           :key="category"
         >
@@ -36,11 +37,21 @@
                 border-radius: 3px;
               "
             ></v-divider>
-            <div>
+            <div class="ml-1">
               <v-list-item
+                class="mb-0"
                 v-for="item in util.categories[category]"
                 :key="item.name"
+                link
+                :to="
+                  ($route.path.includes($route.params.id + '/')
+                    ? ''
+                    : $route.params.id + '/') + item.name
+                "
               >
+              <v-list-item-avatar>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-list-item-avatar>
                 <v-list-item-title>
                   {{ item.name }}
                 </v-list-item-title>
@@ -50,6 +61,7 @@
         </v-list>
       </v-card-text>
     </v-card>
+    <router-view></router-view>
   </v-container>
 </template>
 
@@ -59,6 +71,7 @@
 export default {
   computed: {
     util() {
+      console.log(this.$route);
       return this.utilities[this.$route.params.id];
     },
   },

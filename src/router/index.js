@@ -3,7 +3,10 @@ import VueRouter from "vue-router";
 import UtilitiesList from "../components/UtilitiesList.vue";
 
 //Utils
-import Categories from '../components/Categories.vue';
+import Categories from "../components/Categories.vue";
+
+//Categories
+import Rectangle from "../components/Math/components/geometry/Rectangle.vue";
 
 Vue.use(VueRouter);
 
@@ -14,9 +17,23 @@ const routes = [
     component: UtilitiesList,
   },
   {
-    path: '/Categories/:id',
+    path: '/Categories/:id/',
     name: 'Categories',
     component: Categories,
+    children: [
+      {
+        path: 'Rectangle',
+        component: Rectangle,
+      },
+      {
+        path: 'Square',
+        component: Rectangle,
+      },
+      {
+        path: 'Circle',
+        component: Rectangle,
+      },
+    ],
   },
   {
     path: '/about',
