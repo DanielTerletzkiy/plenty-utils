@@ -4,10 +4,21 @@ const history = require('connect-history-api-fallback');
 const path = require('path');
 const app = express();
 
-const staticFileMiddleware = express.static(path.join(__dirname + '/dist'));
-app.get('/', function (req, res) {
-  res.render(path.join(__dirname + '/dist/index.html'));
+var port = process.env.PORT || 3080;
+app.listen(port, function () {
+  console.log('App now running on port', port);
 });
+
+const staticFileMiddleware = express.static(path.join(__dirname + '/dist'));
+
+app.use(express.json({ limit: '16mb' }));
+app.use(
+  express.urlencoded({
+    extended: true,
+    limit: '16mb',
+  })
+);
+
 app.use(staticFileMiddleware);
 app.use(
   history({
@@ -16,5 +27,7 @@ app.use(
   })
 );
 app.use(staticFileMiddleware);
-const port = process.env.PORT || 80;
-app.listen(port);
+
+app.get('/', function (req, res) {
+  res.render(path.join(__dirname + '/dist/index.html'));
+});
