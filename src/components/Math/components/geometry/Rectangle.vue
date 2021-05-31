@@ -27,18 +27,23 @@ export default {
     examples: [
       {
         description: 'P',
-        given: ['a = 6cm'],
-        process: ['4 * a', '4 * 6cm', '24cm'],
+        given: ['a = 6cm', 'b = 3cm'],
+        process: ['2 * ( a + b )', '2 * ( 6 + 3 )', '2 * 9', '18cm'],
       },
       {
         description: 'A',
-        given: ['a = 8cm'],
-        process: ['a²', 'a * a', '8 * 8', '64cm²'],
+        given: ['a = 8cm', 'b = 4cm'],
+        process: ['a * b', '8 * 4', '32cm²'],
       },
       {
         description: 'a',
-        given: ['A = 16cm²'],
-        process: ['√A', '√16', '4cm'],
+        given: ['A=16cm²', 'b=2cm'],
+        process: ['A/b', '16/2', '8cm'],
+      },
+      {
+        description: 'b',
+        given: ['A=35cm²', 'b=5cm'],
+        process: ['A/a', '35/5', '7cm'],
       },
     ],
   }),

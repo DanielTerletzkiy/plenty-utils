@@ -14,12 +14,11 @@
       Construction
     </v-card-title>
     <v-card-text style="display: flex">
-      <v-row justify="space-between">
+      <v-row justify="space-between" :style="{flexDirection: isPhone ? 'column':'row'}">
         <v-col
           :style="{
             display: 'flex',
             justifyContent: isPhone ? 'center' : 'none',
-            width: isPhone ? '100px' : 'auto',
           }"
         >
           <SquareSVG v-if="type=='square'"/>
@@ -68,9 +67,9 @@
             <v-list rounded color="transparent" dense>
               <v-menu
                 content-class="rounded-lg"
-                :nudge-width="200"
                 offset-x
-                left
+                offset-y
+                top
                 v-for="example in examples"
                 :key="example.description"
               >
