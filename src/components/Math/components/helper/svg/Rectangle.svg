@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328" height="255" viewBox="0 0 328 255">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="150%" y2="0%">
+      <stop offset="0%" style="stop-color: #8e2de2; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #4a00e0; stop-opacity: 1" />
+    </linearGradient>
+  </defs>
+  <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(14 27)" fill="none" stroke="url(#gradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+    <rect width="300" height="200" stroke="none" />
+    <rect x="5" y="5" width="290" height="190" fill="none" />
+  </g>
+  <text id="A" transform="translate(1 249)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">A</tspan>
+  </text>
+  <text id="B" transform="translate(314 250)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">B</tspan>
+  </text>
+  <text id="C" transform="translate(314 22)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">C</tspan>
+  </text>
+  <text id="D" transform="translate(0 22)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">D</tspan>
+  </text>
+  <text id="a-2" data-name="a" transform="translate(159 249)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">a</tspan>
+  </text>
+  <text id="c-2" data-name="c" transform="translate(159 22)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">c</tspan>
+  </text>
+  <line id="Line_2" data-name="Line 2" x2="281" y2="181" transform="translate(23.5 36.5)" fill="none" stroke="url(#gradient)" stroke-width="5" />
+  <text id="d-2" data-name="d" transform="translate(164 122)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">d</tspan>
+  </text>
+  <text id="b-2" data-name="b" transform="translate(316 136)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">b</tspan>
+  </text>
+  <text id="d-3" data-name="d" transform="translate(1 136)" fill="#707070" font-size="20" font-family="SegoeUI, Segoe UI">
+    <tspan x="0" y="0">d</tspan>
+  </text>
+</svg>
