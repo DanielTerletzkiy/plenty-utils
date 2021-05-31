@@ -63,7 +63,7 @@
           >
             Examples
           </v-card-title>
-          <v-card-text>
+          <v-card-text class="pb-0">
             <v-list rounded color="transparent" dense>
               <v-menu
                 content-class="rounded-lg"
