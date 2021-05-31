@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css">
 .theme--dark.v-application {
   background: #18191a;
 }
