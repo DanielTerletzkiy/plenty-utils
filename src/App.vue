@@ -26,12 +26,12 @@ export default {
 
 <style lang="css">
 .theme--dark.v-application {
-  background: #18191a;
+  background: #18191a !important;
 }
 
-.text,
-span {
-  display: block;
+
+.text, .v-card__title, span {
+  display: flex !important;
 }
 
 .v-card__title {
