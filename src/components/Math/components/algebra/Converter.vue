@@ -21,6 +21,7 @@
           hide-details
           rounded
           filled
+          outlined
           tabindex="1"
           v-model="baseLengthValue"
           type="number"
@@ -29,7 +30,7 @@
               calculateLengthUnits();
             }
           "
-          style="position: sticky; top: 64px; z-Index: 2; backdrop-filter: blur(10px)"
+          style="position: sticky; top: 64px; z-Index: 2; backdrop-filter: blur(5px)"
           clearable
         />
         <v-btn-toggle :style="{ margin: isPhone ? '-8px' : 'auto', marginTop: '8px'}" mandatory rounded v-model="baseLengthUnit">
