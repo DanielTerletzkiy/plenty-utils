@@ -26,7 +26,7 @@
             @input="
               () => {
                 calculateSide_Perimiter();
-                this.calculateArea();
+                calculateArea();
               }
             "
           />
@@ -46,6 +46,7 @@
             @input="
               () => {
                 calculateSide_Area();
+                calculatePerimiter();
               }
             "
           />
@@ -64,8 +65,8 @@
             type="number"
             @input="
               () => {
-                this.calculatePerimiter();
-                this.calculateArea();
+                calculatePerimiter();
+                calculateArea();
               }
             "
           />
