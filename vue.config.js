@@ -3,13 +3,13 @@ const paths = [
   {
     path: '/',
     lastmod: new Date().toISOString().slice(0, 10),
-    priority: '0.8',
+    priority: 0.8,
     changefreq: 'hourly',
   },
   {
     path: '/Categories/Math/',
     lastmod: new Date().toISOString().slice(0, 10),
-    priority: '0.8',
+    priority: 0.8,
     changefreq: 'hourly',
   },
 ];
