@@ -19,6 +19,23 @@
 
 <script>
 export default {
-  name: "UtilitiesList",
+  name: 'UtilitiesList',
+
+  metaInfo() {
+    return {
+      title: 'Categories',
+      meta: [
+        { name: 'description', content: 'All useful utilities at a glance' },
+        { property: 'og:title', content: 'Categories' },
+        { property: 'og:site_name', content: 'Plenty Utils' },
+        {
+          property: 'og:description',
+          content: 'All useful utilities at a glance',
+        },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://plenty-utils.herokuapp.com/' },
+      ],
+    };
+  },
 };
 </script>

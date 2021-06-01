@@ -21,6 +21,20 @@ export default {
   data: () => ({
     //
   }),
+
+  metaInfo() {
+        return {
+            title: 'Plenty Utils',
+            meta: [
+                { name: 'description', content: 'Plenty of useful utilities to satisfy plenty of needs'},
+                { property: 'og:title', content: 'Plenty Utils'},
+                { property: 'og:site_name', content: 'Plenty Utils'},
+                { property: 'og:description', content: 'Plenty of useful utilities to satisfy plenty of needs'},
+                {property: 'og:type', content: 'website'},
+                {property: 'og:url', content: 'https://plenty-utils.herokuapp.com/'},
+            ]
+        }
+    },
 };
 </script>
 
