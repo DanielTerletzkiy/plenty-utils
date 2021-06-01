@@ -6,9 +6,14 @@ import UtilitiesList from '../components/UtilitiesList.vue';
 import Categories from '../components/Categories.vue';
 
 //Categories
+
+//*Math
+//?Geometry
 import Square from '../components/Math/components/geometry/Square.vue';
 import Rectangle from '../components/Math/components/geometry/Rectangle.vue';
 import Circle from '../components/Math/components/geometry/Circle.vue';
+//?Algebra
+import Converter from '../components/Math/components/algebra/Converter.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +28,7 @@ const routes = [
     name: 'Categories',
     component: Categories,
     children: [
+      //?Geometry
       {
         path: 'Rectangle',
         component: Rectangle,
@@ -34,6 +40,12 @@ const routes = [
       {
         path: 'Circle',
         component: Circle,
+      },
+
+      //?Algebra
+      {
+        path: 'Converter',
+        component: Converter,
       },
     ],
   },

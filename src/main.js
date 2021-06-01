@@ -23,6 +23,10 @@ Vue.mixin({
     isPhone() {
       return this.$vuetify.breakpoint.xs;
     },
+    util() {
+      console.log(this.$route);
+      return this.utilities[this.$route.params.id];
+    },
   },
   data: () => ({
     utilities: {
@@ -38,7 +42,7 @@ Vue.mixin({
           ],
           algebra: [
             { name: 'Calculator', icon: 'mdi-calculator' },
-            { name: 'Unit Converter', icon: 'mdi-tape-measure' },
+            { name: 'Converter', icon: 'mdi-tape-measure' },
             { name: 'Functions', icon: 'mdi-function-variant' },
           ],
         },
