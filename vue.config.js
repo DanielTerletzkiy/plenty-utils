@@ -18,12 +18,16 @@ module.exports = {
   transpileDependencies: ['vuetify'],
   configureWebpack: {
     plugins: [
-      new SitemapPlugin({base: 'https://plenty-utils.herokuapp.com', paths, options: {
-        filename: 'sitemap.xml',
-        lastmod: true,
-        changefreq: 'hourly',
-        priority: '0.8',
-      }}),
+      new SitemapPlugin({
+        base: 'https://plenty-utils.herokuapp.com',
+        paths,
+        options: {
+          filename: 'sitemap.xml',
+          lastmod: true,
+          changefreq: 'hourly',
+          priority: 0.8,
+        },
+      }),
     ],
   },
   chainWebpack: (config) => {
