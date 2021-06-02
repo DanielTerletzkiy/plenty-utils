@@ -74,7 +74,7 @@
       </v-row>
     </v-row>
     <v-row :style="{ flexDirection: isPhone ? 'column' : 'row' }">
-      <v-col>
+      <v-col style="min-width: 200px">
         <v-card outlined style="diplay: flex">
           <v-card-title>
             Side (a)
@@ -100,7 +100,7 @@
           </v-card-title>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col style="min-width: 200px">
         <v-card outlined style="diplay: flex">
           <v-card-title>
             Perimiter (P)
@@ -127,7 +127,7 @@
           </v-card-title>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col style="min-width: 200px">
         <v-card outlined style="diplay: flex">
           <v-card-title>
             Area (A)

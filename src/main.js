@@ -28,7 +28,6 @@ Vue.mixin({
       return this.$vuetify.breakpoint.xs;
     },
     util() {
-      console.log(this.$route);
       return this.utilities[this.$route.params.id];
     },
   },

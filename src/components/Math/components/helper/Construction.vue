@@ -1,43 +1,22 @@
 <template>
   <v-card rounded="xl" elevation="6" color="hsl(0, 0%, 16%)">
-    <v-card-title
-      class="text-h4 font-weight-bold"
-      v-bind:style="{
-        'white-space': 'inherit !important',
-        'text-transform': 'uppercase',
-        background: util.gradient,
-        '-webkit-background-clip': 'text',
-        '-webkit-text-fill-color': 'transparent',
-        '-webkit-box-decoration-break': 'clone',
-      }"
-    >
-      Construction
-    </v-card-title>
+    <GradientText text="Construction" type="h4" />
     <v-card-text style="display: flex">
-      <v-row justify="space-between" :style="{flexDirection: isPhone ? 'column':'row'}">
+      <v-row
+        justify="space-between"
+        :style="{ flexDirection: isPhone ? 'column' : 'row' }"
+      >
         <v-col
           :style="{
             display: 'flex',
             justifyContent: isPhone ? 'center' : 'none',
           }"
         >
-          <SquareSVG v-if="type=='square'"/>
-          <RectangleSVG v-if="type=='rectangle'"/>
+          <SquareSVG v-if="type == 'square'" />
+          <RectangleSVG v-if="type == 'rectangle'" />
         </v-col>
         <v-col class="pa-0 pt-4">
-          <v-card-title
-            class="text-h5 font-weight-bold"
-            v-bind:style="{
-              'white-space': 'inherit !important',
-              'text-transform': 'uppercase',
-              background: util.gradient,
-              '-webkit-background-clip': 'text',
-              '-webkit-text-fill-color': 'transparent',
-              '-webkit-box-decoration-break': 'clone',
-            }"
-          >
-            Formulas
-          </v-card-title>
+          <GradientText text="Formulas" type="h5" />
           <v-card-text>
             <v-col>
               <v-row v-for="formula in formulas" :key="formula.description">
@@ -50,19 +29,7 @@
           </v-card-text>
         </v-col>
         <v-col class="pa-0 pt-4">
-          <v-card-title
-            class="text-h5 font-weight-bold"
-            v-bind:style="{
-              'white-space': 'inherit !important',
-              'text-transform': 'uppercase',
-              background: util.gradient,
-              '-webkit-background-clip': 'text',
-              '-webkit-text-fill-color': 'transparent',
-              '-webkit-box-decoration-break': 'clone',
-            }"
-          >
-            Examples
-          </v-card-title>
+          <GradientText text="Examples" type="h5" />
           <v-card-text class="pb-0">
             <v-list rounded color="transparent" dense>
               <v-menu
@@ -76,7 +43,8 @@
                 <template #activator="{ on: onMenu }">
                   <v-list-item
                     v-on="{ ...onMenu }"
-                    style="display: block !important"
+                    style="display: block !important; width: calc(100% + 40px);"
+                    class="pr-0 ml-n5"
                   >
                     <div
                       style="
@@ -86,7 +54,7 @@
                       "
                     >
                       <span
-                        class="text-h5 font-weight-bold"
+                        class="text-h5 font-weight-light"
                         style="min-width: 18px; text-align: center"
                       >
                         {{ example.description }}
@@ -160,19 +128,21 @@
 </template>
 
 <script>
-import SquareSVG from './svg/Square.svg'
-import RectangleSVG from './svg/Rectangle.svg'
+import SquareSVG from './svg/Square.svg';
+import RectangleSVG from './svg/Rectangle.svg';
+import GradientText from '@/components/helper/GradientText';
 export default {
-  components:{
+  components: {
     SquareSVG,
-    RectangleSVG
+    RectangleSVG,
+    GradientText,
   },
   props: {
     formulas: Array,
     examples: Array,
     util: Object,
     type: String,
-  }
+  },
 };
 </script>
 
