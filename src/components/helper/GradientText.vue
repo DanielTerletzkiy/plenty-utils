@@ -6,7 +6,6 @@
       background: util.gradient,
       '-webkit-background-clip': 'text',
       '-webkit-text-fill-color': 'transparent',
-      '-webkit-box-decoration-break': 'clone',
     }"
   >
     {{text}}
