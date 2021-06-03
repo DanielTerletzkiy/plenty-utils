@@ -39,13 +39,13 @@ export default {
 </script>
 
 <style lang="css">
-.theme--dark.v-application {
+/*.theme--dark.v-application {
   background: #18191a !important;
-}
+}*/
 
 
 .text, .v-card__title, span {
-  display: flex !important;
+  display: block;
 }
 
 .v-card__title {
