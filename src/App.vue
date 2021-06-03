@@ -22,19 +22,24 @@ export default {
     //
   }),
 
-  metaInfo() {
-        return {
-            title: 'Plenty Utils',
-            meta: [
-                { name: 'description', content: 'Plenty of useful utilities to satisfy plenty of needs'},
-                { property: 'og:title', content: 'Plenty Utils'},
-                { property: 'og:site_name', content: 'Plenty Utils'},
-                { property: 'og:description', content: 'Plenty of useful utilities to satisfy plenty of needs'},
-                {property: 'og:type', content: 'website'},
-                {property: 'og:url', content: 'https://plenty-utils.herokuapp.com/'},
-            ]
-        }
-    },
+  metaInfo: {
+    title: 'Plenty Utils',
+    titleTemplate: '%s | Plenty Utils',
+    meta: [
+      {
+        name: 'description',
+        content: 'Plenty of useful utilities to satisfy plenty of needs',
+      },
+      { property: 'og:title', content: 'Plenty Utils' },
+      { property: 'og:site_name', content: 'Plenty Utils' },
+      {
+        property: 'og:description',
+        content: 'Plenty of useful utilities to satisfy plenty of needs',
+      },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://plenty-utils.herokuapp.com/' },
+    ],
+  },
 };
 </script>
 
@@ -43,8 +48,9 @@ export default {
   background: #18191a !important;
 }*/
 
-
-.text, .v-card__title, span {
+.text,
+.v-card__title,
+span {
   display: block;
 }
 

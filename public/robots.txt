@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://plenty-utils.herokuapp.com/sitemap.xml
