@@ -1,5 +1,6 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const paths = [
@@ -37,6 +38,10 @@ module.exports = {
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
         routes: ['/', '/Categories/Math'],
+        renderer: new Renderer({
+          headless: true,
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        }),
       }),
     ],
   },
