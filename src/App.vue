@@ -8,7 +8,7 @@
       >
     </v-app-bar>
 
-    <v-main>
+    <v-main style="height: calc(100% + 50px)">
       <router-view />
     </v-main>
     <v-bottom-navigation
@@ -17,6 +17,7 @@
         $route.path.split('/').length - 1 < 3
       "
       style="height: 50px; background: #1e1e1e"
+      fixed
     >
       <v-btn
         height="auto"
@@ -51,6 +52,7 @@
         $route.path.split('/').length - 1 >= 3
       "
       style="height: 50px; background: #1e1e1e"
+      fixed
     >
       <div
         v-for="category in Object.keys(util.categories)"

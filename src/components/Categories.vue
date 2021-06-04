@@ -1,6 +1,10 @@
 <template>
   <div :style="{ display: isPhone ? 'block' : 'flex' }">
     <v-container
+      v-if="
+        !isPhone ||
+        $route.path.split('/').length - 1 < 3
+      "
       :style="{
         marginLeft: '0px',
         marginRight: '0px',
