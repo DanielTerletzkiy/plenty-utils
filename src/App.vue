@@ -16,9 +16,11 @@
         $route.path.includes('Categories/') &&
         $route.path.split('/').length - 1 < 3
       "
-      style="height: 57px; background: #1e1e1e"
+      style="height: 50px; background: #1e1e1e"
     >
       <v-btn
+        height="auto"
+        text
         link
         replace
         :to="
@@ -48,7 +50,7 @@
         $route.path.includes('Categories/') &&
         $route.path.split('/').length - 1 >= 3
       "
-      style="height: 57px; background: #1e1e1e"
+      style="height: 50px; background: #1e1e1e"
     >
       <div
         v-for="category in Object.keys(util.categories)"
@@ -56,6 +58,8 @@
         style="height: 100%; overflow-y: auto; overflow-x: auto"
       >
         <v-btn
+          height="auto"
+          text
           v-haptic="{
             trigger: 'click',
           }"
