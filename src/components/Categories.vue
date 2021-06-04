@@ -101,23 +101,6 @@ export default {
       console.log(this.$route);
       return this.utilities[this.$route.params.id];
     },
-    category() {
-      try {
-        var category = Object.keys(this.util.categories).find((e) =>
-          this.util.categories[e].find(
-            (x) => x.name == this.$route.path.split('/')[3]
-          )
-        );
-        var item = this.util.categories[category].find(
-          (x) => x.name == this.$route.path.split('/')[3]
-        );
-        item.parent = category;
-        console.log(item);
-        return item;
-      } catch (error) {
-        return {};
-      }
-    },
   },
   metaInfo() {
     const category = this.category.name;

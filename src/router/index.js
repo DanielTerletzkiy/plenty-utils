@@ -5,6 +5,10 @@ import UtilitiesList from '../components/UtilitiesList.vue';
 //Utils
 import Categories from '../components/Categories.vue';
 
+// 404
+import PageNotFound from '../components/PageNotFound.vue';
+
+
 //Categories
 
 //*Math
@@ -52,17 +56,13 @@ const routes = [
         path: 'Converter',
         component: Converter,
       },
+
+      //? 404
+      { path: '', component: PageNotFound },
     ],
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
+  //? 404
+  { path: '*', component: PageNotFound },
 ];
 
 const router = new VueRouter({

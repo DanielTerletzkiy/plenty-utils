@@ -3,7 +3,7 @@
     :class="'text-'+type+' font-weight-bold'"
     v-bind:style="{
       'text-transform': 'uppercase',
-      background: util.gradient,
+      background: util?util.gradient:color,
       '-webkit-background-clip': 'text',
       '-webkit-text-fill-color': 'transparent',
     }"
@@ -17,6 +17,7 @@ export default {
   props: {
     text: undefined,
     type: String,
+    color: String,
   }
 };
 </script>

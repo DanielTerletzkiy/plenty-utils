@@ -9,6 +9,17 @@ import vuetify from './plugins/vuetify';
 import VueMeta from 'vue-meta';
 Vue.use(VueMeta);
 
+//haptic vibration feedback
+import VueHaptic from 'vue-haptic';
+Vue.use(VueHaptic, {
+  patterns: {
+    success: [10, 100, 30],
+    failure: [10, 50, 10, 50, 50, 100, 10],
+    long: 200,
+    default: 10,
+  },
+});
+
 Vue.config.productionTip = false;
 
 Vue.mixin({
@@ -29,6 +40,23 @@ Vue.mixin({
     },
     util() {
       return this.utilities[this.$route.params.id];
+    },
+    category() {
+      try {
+        var category = Object.keys(this.util.categories).find((e) =>
+          this.util.categories[e].find(
+            (x) => x.name == this.$route.path.split('/')[3]
+          )
+        );
+        var item = this.util.categories[category].find(
+          (x) => x.name == this.$route.path.split('/')[3]
+        );
+        item.parent = category;
+        console.log(item);
+        return item;
+      } catch (error) {
+        return {};
+      }
     },
   },
   data: () => ({

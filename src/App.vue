@@ -11,6 +11,77 @@
     <v-main>
       <router-view />
     </v-main>
+    <v-bottom-navigation
+      v-if="
+        $route.path.includes('Categories/') &&
+        $route.path.split('/').length - 1 < 3
+      "
+      style="height: 57px; background: #1e1e1e"
+    >
+      <v-btn
+        link
+        replace
+        :to="
+          $route.path.includes('Categories/')
+            ? util.name
+            : 'Categrories/' + util.name
+        "
+        v-for="util in Object.values(utilities)"
+        :key="util.name"
+      >
+        <span>{{ util.name }}</span>
+        <v-icon
+          large
+          v-bind:style="{
+            background: util.gradient,
+            '-webkit-background-clip': 'text',
+            '-webkit-text-fill-color': 'transparent',
+            '-webkit-box-decoration-break': 'clone',
+          }"
+          >{{ util.icon }}</v-icon
+        >
+      </v-btn>
+    </v-bottom-navigation>
+
+    <v-bottom-navigation
+      v-if="
+        $route.path.includes('Categories/') &&
+        $route.path.split('/').length - 1 >= 3
+      "
+      style="height: 57px; background: #1e1e1e"
+    >
+      <div
+        v-for="category in Object.keys(util.categories)"
+        :key="category"
+        style="height: 100%; overflow-y: auto; overflow-x: auto"
+      >
+        <v-btn
+          v-haptic="{
+            trigger: 'click',
+          }"
+          v-for="item in util.categories[category]"
+          :key="item.name"
+          link
+          :to="
+            ($route.path.includes($route.params.id + '/')
+              ? ''
+              : $route.params.id + '/') + item.name
+          "
+        >
+          <span>{{ item.name }}</span>
+          <v-icon
+            large
+            v-bind:style="{
+              background: util.gradient,
+              '-webkit-background-clip': 'text',
+              '-webkit-text-fill-color': 'transparent',
+              '-webkit-box-decoration-break': 'clone',
+            }"
+            >{{ item.icon }}</v-icon
+          >
+        </v-btn>
+      </div>
+    </v-bottom-navigation>
   </v-app>
 </template>
 

@@ -6,7 +6,7 @@
           link
           :to="'Categories/' + util.name"
           x-large
-          :width="isPhone ? '100%' : 300"
+          :width="isPhone ? '100%' : '100%'"
           :style="{ background: util.gradient }"
         >
           <v-icon large>{{ util.icon }}</v-icon
