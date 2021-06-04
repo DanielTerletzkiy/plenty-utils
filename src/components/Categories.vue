@@ -79,6 +79,7 @@
             'white-space': 'inherit !important',
             'text-transform': 'uppercase',
             background: util.gradient,
+            display: 'flex',
           }"
         >
           <v-icon x-large>{{ category.icon }}</v-icon
