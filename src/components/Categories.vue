@@ -120,12 +120,16 @@ export default {
     },
   },
   metaInfo() {
+    const category = this.category.name;
     const name = this.util.name;
     return {
       title: name,
-      titleTemplate: `%s | ${name} | Plenty Utils`,
+      titleTemplate: `${category} | ${name} | Plenty Utils`,
       meta: [
-        { name: 'description', content: 'Plenty of useful information about Math' },
+        {
+          name: 'description',
+          content: 'Plenty of useful information about Math',
+        },
         { property: 'og:title', content: 'Math' },
         { property: 'og:site_name', content: 'Plenty Utils' },
         {
@@ -133,7 +137,10 @@ export default {
           content: 'Plenty of useful information about Math',
         },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://plenty-utils.herokuapp.com/Categories/Math' },
+        {
+          property: 'og:url',
+          content: 'https://plenty-utils.herokuapp.com/Categories/Math',
+        },
       ],
     };
   },

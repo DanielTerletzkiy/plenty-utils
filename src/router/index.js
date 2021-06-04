@@ -13,6 +13,7 @@ import Square from '../components/Math/components/geometry/Square.vue';
 import Rectangle from '../components/Math/components/geometry/Rectangle.vue';
 import Circle from '../components/Math/components/geometry/Circle.vue';
 //?Algebra
+import Calculator from '../components/Math/components/algebra/Calculator.vue';
 import Converter from '../components/Math/components/algebra/Converter.vue';
 
 Vue.use(VueRouter);
@@ -43,6 +44,10 @@ const routes = [
       },
 
       //?Algebra
+      {
+        path: 'Calculator',
+        component: Calculator,
+      },
       {
         path: 'Converter',
         component: Converter,

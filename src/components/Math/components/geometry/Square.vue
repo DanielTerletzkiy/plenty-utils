@@ -219,22 +219,22 @@ export default {
     },
   },
 
-  metaInfo() {
-    return {
-      title: 'Square',
-      meta: [
-        { name: 'description', content: 'Construction and Examples of calculating Squares' },
-        { property: 'og:title', content: 'Square' },
-        { property: 'og:site_name', content: 'Plenty Utils' },
-        {
-          property: 'og:description',
-          content: 'Construction and Examples of calculating Squares',
-        },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://plenty-utils.herokuapp.com/Categories/Math/Square' },
-      ],
-    };
-  },
+  //metaInfo() {
+  //  return {
+  //    title: 'Square',
+  //    meta: [
+  //      { name: 'description', content: 'Construction and Examples of calculating Squares' },
+  //      { property: 'og:title', content: 'Square' },
+  //      { property: 'og:site_name', content: 'Plenty Utils' },
+  //      {
+  //        property: 'og:description',
+  //        content: 'Construction and Examples of calculating Squares',
+  //      },
+  //      { property: 'og:type', content: 'website' },
+  //      { property: 'og:url', content: 'https://plenty-utils.herokuapp.com/Categories/Math/Square' },
+  //    ],
+  //  };
+  //},
 };
 </script>
 
