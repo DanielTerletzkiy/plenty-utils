@@ -78,9 +78,15 @@ Vue.mixin({
           ],
         },
       },
+      Physics: {
+        name: 'Physics',
+        icon: 'mdi-cosine-wave',
+        gradient: 'linear-gradient(to right, #8360c3, #2ebf91)',
+        categories: {},
+      },
       Chemistry: {
         name: 'Chemistry',
-        icon: 'mdi-safety-goggles',
+        icon: 'mdi-test-tube',  //'mdi-safety-goggles',
         gradient: 'linear-gradient(to right, #dc2424, #4a00e0)',
         categories: {},
       },
@@ -94,7 +100,11 @@ Vue.mixin({
         name: 'Letters',
         icon: 'mdi-file-document-edit-outline',
         gradient: 'linear-gradient(to right, #1c92d2, #64c2f5)',
-        categories: {},
+        categories: {
+          maker: [
+            { name: 'Construction', icon: 'mdi-typewriter' },
+          ],
+        },
       },
     },
   }),

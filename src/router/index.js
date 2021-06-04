@@ -20,6 +20,10 @@ import Circle from '../components/Math/components/geometry/Circle.vue';
 import Calculator from '../components/Math/components/algebra/Calculator.vue';
 import Converter from '../components/Math/components/algebra/Converter.vue';
 
+//*Letters
+//?Maker
+import LetterConstructor from '../components/Letter/components/Construction.vue';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -33,6 +37,7 @@ const routes = [
     name: 'Categories',
     component: Categories,
     children: [
+      //*Math
       //?Geometry
       {
         path: 'Rectangle',
@@ -55,6 +60,13 @@ const routes = [
       {
         path: 'Converter',
         component: Converter,
+      },
+
+      //*Letters
+      //?Maker
+      {
+        path: 'Construction',
+        component: LetterConstructor,
       },
 
       //? 404
