@@ -20,6 +20,17 @@ const paths = [
 
 module.exports = {
   transpileDependencies: ['vuetify'],
+  devServer: {
+    historyApiFallback: true,
+    proxy: {
+      '^/api/': {
+        target: 'http://localhost:3080',
+        pathRewrite: { '^/api/': '/api/' },
+        changeOrigin: true,
+        logLevel: 'debug',
+      },
+    },
+  },
   configureWebpack: {
     plugins: [
       new SitemapPlugin({

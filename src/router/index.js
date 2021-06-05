@@ -18,7 +18,12 @@ import Rectangle from '../components/Math/components/geometry/Rectangle.vue';
 import Circle from '../components/Math/components/geometry/Circle.vue';
 //?Algebra
 import Calculator from '../components/Math/components/algebra/Calculator.vue';
+import Percentage from '../components/Math/components/algebra/Percentage.vue';
 import Converter from '../components/Math/components/algebra/Converter.vue';
+
+//*Computer
+//?Configurator
+import ComputerBuilder from '../components/Computer/components/configurator/Builder';
 
 //*Letters
 //?Maker
@@ -58,8 +63,19 @@ const routes = [
         component: Calculator,
       },
       {
+        path: 'Percentage',
+        component: Percentage,
+      },
+      {
         path: 'Converter',
         component: Converter,
+      },
+
+      //*Computer
+      //?Configurator
+      {
+        path: 'Builder',
+        component: ComputerBuilder,
       },
 
       //*Letters

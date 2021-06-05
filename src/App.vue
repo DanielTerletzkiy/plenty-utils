@@ -54,18 +54,14 @@
       style="height: 50px; background: #1e1e1e"
       fixed
     >
-      <div
-        v-for="category in Object.keys(util.categories)"
-        :key="category"
-        style="height: 100%; overflow-y: auto; overflow-x: auto"
-      >
+      <div style="height: 100%; overflow-y: auto; overflow-x: auto">
         <v-btn
           height="auto"
           text
           v-haptic="{
             trigger: 'click',
           }"
-          v-for="item in util.categories[category]"
+          v-for="item in categories"
           :key="item.name"
           link
           :to="
@@ -98,6 +94,20 @@ export default {
   data: () => ({
     //
   }),
+
+  computed: {
+    categories() {
+      var arr = [];
+
+      Object.keys(this.util.categories).forEach((element) => {
+        var items = this.util.categories[element];
+        arr = arr.concat(items);
+        console.log(arr);
+      });
+
+      return arr;
+    },
+  },
 
   metaInfo: {
     title: 'Plenty Utils',

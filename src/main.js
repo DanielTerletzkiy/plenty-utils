@@ -73,6 +73,7 @@ Vue.mixin({
           ],
           algebra: [
             { name: 'Calculator', icon: 'mdi-calculator' },
+            { name: 'Percentage', icon: 'mdi-percent' },
             { name: 'Converter', icon: 'mdi-tape-measure' },
             { name: 'Functions', icon: 'mdi-function-variant' },
           ],
@@ -86,9 +87,19 @@ Vue.mixin({
       },
       Chemistry: {
         name: 'Chemistry',
-        icon: 'mdi-test-tube',  //'mdi-safety-goggles',
+        icon: 'mdi-test-tube', //'mdi-safety-goggles',
         gradient: 'linear-gradient(to right, #dc2424, #4a00e0)',
         categories: {},
+      },
+      Computer: {
+        name: 'Computer',
+        icon: 'mdi-memory',
+        gradient: 'linear-gradient(to right, #ff4b2b, #ff6387)',
+        categories: {
+          configurator: [
+            { name: 'Builder', icon: 'mdi-hammer' },
+          ]
+        },
       },
       Info: {
         name: 'Info',
@@ -101,9 +112,7 @@ Vue.mixin({
         icon: 'mdi-file-document-edit-outline',
         gradient: 'linear-gradient(to right, #1c92d2, #64c2f5)',
         categories: {
-          maker: [
-            { name: 'Construction', icon: 'mdi-typewriter' },
-          ],
+          maker: [{ name: 'Construction', icon: 'mdi-typewriter' }],
         },
       },
     },

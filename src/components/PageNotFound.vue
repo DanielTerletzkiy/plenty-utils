@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="ma-2">
-    <v-card outlined flat height="150"> <h1 class="glitch" data-text="!Error!">Page Not Found</h1> </v-card>
+    <v-card outlined flat height="90"> <h1 class="glitch" :style="{fontSize: isPhone?'20px':'60px'}" data-text="!Error!">Page Not Found</h1> </v-card>
   </div>
 </template>
 
@@ -14,12 +14,11 @@ $secondaryColor: #1E1E1E;
 $steps: 10;
 
 .glitch {
-    margin-top: 60px;
+    margin-top: 35px;
     color: $primaryColor;
     font-family: "Exo", sans-serif;
     font-weight: 600;
     text-align: center;
-    font-size: 100px;
     text-transform: uppercase;
     letter-spacing: 0.01em;
     transform: scale3d(1,1,1);
