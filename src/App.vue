@@ -9,7 +9,7 @@
       <v-spacer></v-spacer>
       <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn icon color="primary" v-bind="attrs" v-on="on">
+          <v-btn icon color="primary lighten-2" v-bind="attrs" v-on="on">
             <v-icon x-large>mdi-github</v-icon>
           </v-btn>
         </template>
@@ -167,5 +167,35 @@ span {
 
 .v-card__title {
   display: block;
+}
+
+.gh-button-container{
+  border-radius: 24px;
+  border: 2px solid grey;
+  background: hsl(0, 0%, 20%) !important;
+}
+.octicon{
+  fill: #ffff !important;
+}
+.social-count {
+  border: 2px solid grey;
+  border-radius: 24px !important;
+  background-color: hsl(0, 0%, 30%) !important;
+}
+.gh-button {
+  border-radius: 24px !important;
+  background-color: hsl(0, 0%, 20%) !important;
+  border-right: 2px solid grey;
+  background-image: none !important;
+  text-decoration: none !important;
+  color: #ffff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 3px 10px;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 </style>

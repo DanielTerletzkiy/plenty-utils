@@ -100,9 +100,7 @@ Vue.mixin({
         icon: 'mdi-memory',
         gradient: 'linear-gradient(to right, #ff4b2b, #ff6387)',
         categories: {
-          configurator: [
-            { name: 'Builder', icon: 'mdi-hammer' },
-          ]
+          configurator: [{ name: 'Builder', icon: 'mdi-hammer' }],
         },
       },
       Info: {
