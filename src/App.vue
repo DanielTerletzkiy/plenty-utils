@@ -8,7 +8,7 @@
       >
     </v-app-bar>
 
-    <v-main style="height: calc(100% + 50px)">
+    <v-main :style="{height: isPhone?'calc(100% + 50px)':''}">
       <router-view />
     </v-main>
     <v-bottom-navigation
