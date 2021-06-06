@@ -13,8 +13,17 @@
             <v-icon x-large>mdi-github</v-icon>
           </v-btn>
         </template>
-        <v-card outlined>
+        <v-card outlined width="135">
           <v-row class="ma-0">
+            <v-col cols="12">
+              <v-btn
+                href="https://github.com/DanielTerletzkiy/plenty-utils"
+                rounded
+                style="border: 2px solid grey"
+              >
+                <v-icon>mdi-github</v-icon>Repo
+              </v-btn>
+            </v-col>
             <v-col>
               <gh-btns-star
                 slug="DanielTerletzkiy/plenty-utils"
@@ -169,12 +178,12 @@ span {
   display: block;
 }
 
-.gh-button-container{
+.gh-button-container {
   border-radius: 24px;
   border: 2px solid grey;
   background: hsl(0, 0%, 20%) !important;
 }
-.octicon{
+.octicon {
   fill: #ffff !important;
 }
 .social-count {
