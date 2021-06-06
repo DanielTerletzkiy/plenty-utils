@@ -9,6 +9,10 @@ import vuetify from './plugins/vuetify';
 import VueMeta from 'vue-meta';
 Vue.use(VueMeta);
 
+import VueGitHubButtons from 'vue-github-buttons';
+import 'vue-github-buttons/dist/vue-github-buttons.css';
+Vue.use(VueGitHubButtons, { useCache: false });
+
 //haptic vibration feedback
 import VueHaptic from 'vue-haptic';
 Vue.use(VueHaptic, {

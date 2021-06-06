@@ -6,9 +6,11 @@
         class="text-h3 font-weight-light grey--text"
         >Plenty of Utils</v-card-title
       >
+      <gh-btns-star slug="DanielTerletzkiy/plenty-utils" show-count></gh-btns-star>
+      <gh-btns-fork  slug="DanielTerletzkiy/plenty-utils" show-count></gh-btns-fork>
     </v-app-bar>
 
-    <v-main :style="{height: isPhone?'calc(100% + 50px)':''}">
+    <v-main :style="{ height: isPhone ? 'calc(100% + 50px)' : '' }">
       <router-view />
     </v-main>
     <v-bottom-navigation
