@@ -6,8 +6,30 @@
         class="text-h3 font-weight-light grey--text"
         >Plenty of Utils</v-card-title
       >
-      <gh-btns-star slug="DanielTerletzkiy/plenty-utils" show-count></gh-btns-star>
-      <gh-btns-fork  slug="DanielTerletzkiy/plenty-utils" show-count></gh-btns-fork>
+      <v-spacer></v-spacer>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon color="primary" v-bind="attrs" v-on="on">
+            <v-icon x-large>mdi-github</v-icon>
+          </v-btn>
+        </template>
+        <v-card outlined>
+          <v-row class="ma-0">
+            <v-col>
+              <gh-btns-star
+                slug="DanielTerletzkiy/plenty-utils"
+                show-count
+              ></gh-btns-star>
+            </v-col>
+            <v-col>
+              <gh-btns-fork
+                slug="DanielTerletzkiy/plenty-utils"
+                show-count
+              ></gh-btns-fork>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-menu>
     </v-app-bar>
 
     <v-main :style="{ height: isPhone ? 'calc(100% + 50px)' : '' }">
